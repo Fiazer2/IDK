@@ -13,31 +13,92 @@ local NoCollisions = KryptonSetConfig.NoCollisions or Flinging or nil
 local LimitHatsPerLimb = KryptonSetConfig.LimitHatsPerLimb or nil
 local DisableCharacterScripts = KryptonSetConfig.DisableCharacterScripts or nil
 
+-- Alias bien définis
+local DefaultHats = {}
+
+-- Fonction raccourcie pour les rotations
+local function rot(x, y, z)
+    return CFrame.Angles(math.rad(x), math.rad(y), math.rad(z))
+end
+
+-- Zéro CFrame pour les MeshPartAccessory du torse
+local cf0 = CFrame.new()
+
 local DefaultHats = {
-	["Right Arm"] = {
-		{Texture = "", Mesh = "105141400603933", Name = "RARM", C0=angles(0,0,1.5707963267948966)},
-		{Texture = "4645402630", Mesh = "3030546036", Name = "International Fedora", Offset = CFrame.Angles(math.rad(-90), 0, math.rad(90))}
-	},
+    ["Right Arm"] = {
+        {
+            Texture = "", 
+            Mesh    = "rbxassetid://105141400603933", 
+            Name    = "RARM", 
+            C0      = rot(0, 0, 90),
+        },
+        {
+            Texture = "rbxassetid://4645402630", 
+            Mesh    = "rbxassetid://3030546036", 
+            Name    = "International Fedora", 
+            C0      = rot(-90, 0, 90),
+        },
+    },
 
-	["Left Arm"] = {
-		{Texture = "", Mesh = "90736849096372", Name = "LARM", C0=angles(0,0,1.5707963267948966)},
-		{Texture = "3650139425", Mesh = "3030546036", Name = "International Fedora", Offset = CFrame.Angles(math.rad(-90), 0, math.rad(-90))}
-	},
+    ["Left Arm"] = {
+        {
+            Texture = "", 
+            Mesh    = "rbxassetid://90736849096372", 
+            Name    = "LARM", 
+            C0      = rot(0, 0, 90),
+        },
+        {
+            Texture = "rbxassetid://3650139425", 
+            Mesh    = "rbxassetid://3030546036", 
+            Name    = "International Fedora", 
+            C0      = rot(-90, 0, -90),
+        },
+    },
 
-	["Right Leg"] = {
-		{Texture = "", Mesh = "99608462237958", Name = "Accessory (RARM)", C0=angles(0,0,1.5707963267948966)},
-		{Texture = "4622077774", Mesh = "3030546036", Name = "International Fedora", Offset = CFrame.Angles(math.rad(-90), 0, math.rad(90))}
-	},
+    ["Right Leg"] = {
+        {
+            Texture = "", 
+            Mesh    = "rbxassetid://99608462237958", 
+            Name    = "Accessory (RARM)", 
+            C0      = rot(0, 0, 90),
+        },
+        {
+            Texture = "rbxassetid://4622077774", 
+            Mesh    = "rbxassetid://3030546036", 
+            Name    = "International Fedora", 
+            C0      = rot(-90, 0, 90),
+        },
+    },
 
-	["Left Leg"] = {
-		{Texture = "", Mesh = "139733645770094", Name = "Accessory (LARM)", C0=angles(0,0,1.5707963267948966)},
-		{Texture = "3860099469", Mesh = "3030546036", Name = "InternationalFedora", Offset = CFrame.Angles(math.rad(-90), 0, math.rad(-90))}
-	},	
+    ["Left Leg"] = {
+        {
+            Texture = "", 
+            Mesh    = "rbxassetid://139733645770094", 
+            Name    = "Accessory (LARM)", 
+            C0      = rot(0, 0, 90),
+        },
+        {
+            Texture = "rbxassetid://3860099469", 
+            Mesh    = "rbxassetid://3030546036", 
+            Name    = "International Fedora", 
+            C0      = rot(-90, 0, -90),
+        },
+    },
 
-	["Torso"] = {
-		{Texture = "", Mesh = "138364679836274", Name = "MeshPartAccessory", C0=cf_0},
-		{Texture = "", Mesh = "138364679836274", Name = "MeshPartAccessory", C0=cf_0}
-	},
+    ["Torso"] = {
+        {
+            Texture = "", 
+            Mesh    = "rbxassetid://138364679836274", 
+            Name    = "MeshPartAccessory", 
+            C0      = cf0,
+        },
+        {
+            Texture = "", 
+            Mesh    = "rbxassetid://138364679836274", 
+            Name    = "MeshPartAccessory", 
+            C0      = cf0,
+        },
+    },
 }
 
 local Hats = KryptonSetConfig.Hats or DefaultHats
