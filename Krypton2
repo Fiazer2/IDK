@@ -27,22 +27,22 @@ local cf0 = CFrame.new()
 local DefaultHats = {
 	["Right Arm"] = {
 		{Texture = "", Mesh = "105141400603933", Name = "RARM", C0=angles(0,0,1.5707963267948966)},
-		{Texture = "4645402630", Mesh = "3030546036", Name = "International Fedora", Offset = CFrame.Angles(math.rad(-90), 0, math.rad(90))}
+		{Texture = "", Mesh = "105141400603933", Name = "International Fedora", Offset = CFrame.Angles(math.rad(-90), 0, math.rad(90))}
 	},
 
 	["Left Arm"] = {
 		{Texture = "", Mesh = "90736849096372", Name = "LARM", C0=angles(0,0,1.5707963267948966)},
-		{Texture = "3650139425", Mesh = "3030546036", Name = "International Fedora", Offset = CFrame.Angles(math.rad(-90), 0, math.rad(-90))}
+		{Texture = "", Mesh = "90736849096372", Name = "International Fedora", Offset = CFrame.Angles(math.rad(-90), 0, math.rad(-90))}
 	},
 
 	["Right Leg"] = {
 		{Texture = "", Mesh = "99608462237958", Name = "Accessory (RARM)", C0=angles(0,0,1.5707963267948966)},
-		{Texture = "4622077774", Mesh = "3030546036", Name = "International Fedora", Offset = CFrame.Angles(math.rad(-90), 0, math.rad(90))}
+		{Texture = "", Mesh = "99608462237958", Name = "International Fedora", Offset = CFrame.Angles(math.rad(-90), 0, math.rad(90))}
 	},
 
 	["Left Leg"] = {
 		{Texture = "", Mesh = "139733645770094", Name = "Accessory (LARM)", C0=angles(0,0,1.5707963267948966)},
-		{Texture = "3860099469", Mesh = "3030546036", Name = "InternationalFedora", Offset = CFrame.Angles(math.rad(-90), 0, math.rad(-90))}
+		{Texture = "", Mesh = "139733645770094", Name = "InternationalFedora", Offset = CFrame.Angles(math.rad(-90), 0, math.rad(-90))}
 	},	
 
 	["Torso"] = {
